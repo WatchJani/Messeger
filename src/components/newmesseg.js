@@ -15,7 +15,7 @@ class Enter extends Component {
 
 
     poruka = (e) => {
-        if (e.target.value != "") {
+        if (e.target.value !== "") {
             this.props.dodajporuku(this.state)
             this.setState({ mess: "" })
         }
@@ -24,7 +24,7 @@ class Enter extends Component {
     /*dodaj poruku na enter*/
     dole = e => {
         if (e.keyCode === 13) {
-            if (e.target.value != "") {
+            if (e.target.value !== "") {
                 this.props.dodajporuku(this.state)
                 this.setState({ mess: "" })
             }
@@ -35,7 +35,7 @@ class Enter extends Component {
     render() {
         return (
             <div className="nesto">
-                <input type="text" name="" id="enter" placeholder="Vaša poruka" onChange={this.nova_poruka} onKeyUp={this.dole} value={this.state.mess} />
+                <input type="text" name="" id="enter" placeholder="Vaša poruka" onChange={this.nova_poruka} onKeyDown={this.dole} value={this.state.mess} />
                 <button onClick={this.poruka}>Pošalji</button>
             </div>
         )
