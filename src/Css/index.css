@@ -66,10 +66,11 @@
 
 .nesto{
     display: flex;
+    margin-top: 10px;
 }
 
 .poruke{
-    height: calc(100vh - 40px);
+    height: calc(100vh - 50px);
     overflow-y: auto;
 }
 

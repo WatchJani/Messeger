@@ -2,6 +2,9 @@ import React from "react"
 
 
 const Mess = ({mes}) => {
+
+       
+
         return (
             <div className="sve">
                 <div className="mess">

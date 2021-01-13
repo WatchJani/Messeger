@@ -19,13 +19,23 @@ class Enter extends Component {
        this.setState({mess : ""})
     }
 
-   
+
+   dole= e =>{
+        if(e.keyCode===13){
+            this.props.dodajporuku(this.state)
+            this.setState({mess : ""})
+        }
+        else{
+            console.log("bra")
+        }
+
+   }
 
 
     render() {
         return (
             <div className="nesto">
-                <input type="text" name="" id="enter" placeholder="Vaša poruka" onChange={this.nova_poruka} value={this.state.mess}/>
+                <input type="text" name="" id="enter" placeholder="Vaša poruka" onChange={this.nova_poruka} onKeyUp={this.dole} value={this.state.mess}/>
                 <button onClick={this.poruka}>Pošalji</button>
             </div>
         )
