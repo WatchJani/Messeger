@@ -25,10 +25,6 @@ class Enter extends Component {
             this.props.dodajporuku(this.state)
             this.setState({mess : ""})
         }
-        else{
-            console.log("bra")
-        }
-
    }
 
 
